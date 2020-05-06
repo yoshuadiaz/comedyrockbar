@@ -5,6 +5,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import logoFull from '../img/logo-full.svg'
 
 export const IndexPageTemplate = ({
   image,
@@ -39,25 +40,22 @@ export const IndexPageTemplate = ({
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
+            lineHeight: '0',
             padding: '0.25em',
+            textAlign: 'center',
+            maxHeight: '300px',
           }}
         >
-          {title}
+          <img src={logoFull} alt={title} style={{ height: '300px' }} />
         </h1>
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
+            backgroundColor: 'rgb(0, 0, 0, .8)',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
+            marginTop: '1em'
           }}
         >
           {subheading}
@@ -90,13 +88,13 @@ export const IndexPageTemplate = ({
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
-                      See all products
+                      Ver nuestro menú
                     </Link>
                   </div>
                 </div>
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                    Lo nuevo en el blog
                   </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
